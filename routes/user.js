@@ -73,7 +73,7 @@ router
   .route('/arduino') //////gdfdfddgd
   .get((req, res) => {
     var body = req.body
-    var sql = `INSERT INTO event1(device_id, Token)  VALUES('${body.device_id}' , '${body.Token}')`;
+    var sql = `INSERT INTO event1(device_id, Token)  VALUES("","${body.device_id}" , "${body.Token}")`;
     console.log("INSERT SUCCESS")
     doQuery(sql).then(resp => {
       console.log(resp)
