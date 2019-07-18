@@ -72,7 +72,7 @@ router
 router
   .route('/arduino') //////gdfdfddgd
   .get((req, res) => {
-    var body = req.body
+    var body = req.query
     var sql = `INSERT INTO event1(device_id, Token)  VALUES('${body.device_id}' , '${body.Token}')`;
     console.log("Query :" + sql );
     doQuery(sql).then(resp => {
